@@ -1,0 +1,53 @@
+<header class="bg_animate">
+        <nav>
+            <h1>Palabras Invertidas: Medio</h1>
+            <div class="nav__list">
+                <a href="/niveleseconica">
+                    <i class='bx bx-left-arrow-alt'></i>
+                    Volver
+                </a>
+            </div>
+        </nav>
+
+        <section class="banner contenedor">
+        <div>
+            <div class="columns">
+                <div class="column">
+                    <form onsubmit="comprobar();event.preventDefault()" action="">
+                        <div class="form-group">
+                            <h1>Adivina la palabra</h1>
+                            <br>
+                            <p>Tienes <span id="intentos">3</span> intentos</p>
+                            <br>
+                            <button type="button" onclick="invertir();" class="btn btn-primary input-group-btn">Invertir</button>
+                            <br>
+                            <p><span id="el-resultado"></span></p>
+                            <br>
+                            <span class="input-group-addon">Escribe la palabra que escuchaste</span>
+                            <input id="palabra_1" type="text" class="form-input" placeholder="">
+                            <br>
+                            <button type="submit" class="btn btn-primary input-group-btn">Comprobar</button>
+                        </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="burbujas">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+        </div>
+</header>
+<link rel="stylesheet" href="/CSS/Cssjuegos.css">
+<script src="/JS/games/visual/InvertirPalabras/medio.js"></script>

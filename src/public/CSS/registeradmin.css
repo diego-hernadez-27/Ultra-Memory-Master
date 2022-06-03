@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.container{
+    display: grid;
+    place-content: center;
+    min-height: 90vh;
+}
+
+.appe, .name {
+  display: none;
+}
+
+body,
+input {
+    font-family: 'Coming Soon', cursive;
+}
+
+.password{
+  padding-right: 22px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.title {
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 10px;
+    font-family: 'Coming Soon', cursive;
+}
+.title_2 {
+    font-size: 2.2rem;
+    color: #444;
+    margin-bottom: 10px;
+    font-family: 'Coming Soon', cursive;
+}
+
+.input-field {
+    max-width: 380px;
+    min-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.input-field i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+
+.input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.input-field input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+
+.btn {
+    width: 150px;
+    background-color: #78f7cc;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: rgba(8, 8, 8, 0.603);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+@media (max-width: 870px) {
+    .container {
+      min-height: 800px;
+      height: 100vh;
+    }
+}
+
+@media (max-width: 570px) {
+    form {
+      padding: 0 1.5rem;
+    }
+    .title_2{
+        font-size: 1.8rem;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #444;
+    margin-top: 10px;
+}
+
+.adminis{
+    color: #444;
+}
+
+.formulario__input-error{
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+
+.formulario__input-error{
+  max-width: 380px;
+}
+
+.formulario__input-error-activo {
+  display: block;
+  text-align: center;
+}
+
+.formulario__validacion-estado{
+  position:absolute;
+  right: 10px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.formulario__checkbox{
+  margin-right: 10px;
+}
+
+.formulario__mensaje{
+  text-align: center;
+  min-height: 25px;
+  max-heheight: 30px;
+  line-height: 30px;
+  background: #F66060;
+  padding: 0 15px;
+  border-radius: 10px;
+  display: none;
+}
+
+b{
+  font-family: 'Coming Soon', cursive;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+/*Estilos para validaciones*/
+.formulario__grupo-correcto .formulario__validacion-estado{
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado{
+  color: #bb2929;
+  opacity: 1;
+}
+
+.formulario__grupo-incorrecto .input-field{
+  border: 3px solid #bb2929;
+}

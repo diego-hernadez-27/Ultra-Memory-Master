@@ -1,0 +1,69 @@
+<header class="bg_animate">
+<script src="/JS/games/auditiva/RepetirPalabra/codigo.js"></script>
+<link rel="stylesheet" href="/CSS/Cssjuegos.css">
+        <nav>
+            <h1>Palabras Invertidas: Fácil</h1>
+            <div class="nav__list">
+                <a href="/nivelesecoica">
+                    <i class='bx bx-left-arrow-alt'></i>
+                    Volver
+                </a>
+            </div>
+        </nav>
+
+
+        <section class="banner contenedor">
+
+        <div class="container grid-sm">
+            <div class="columns">
+                <div class="column">
+                    <form onsubmit="comprobar();event.preventDefault()" action="">
+                        <div class="form-group">
+                            <div class="hero hero-sm">
+                                <div class="hero-body">
+                                    <h1>Adivina la palabra</h1>
+                                    <br>
+                                    <p>Tienes <span id="intentos">3</span> intentos</p>
+                                    <br>
+                                </div>
+                            </div>
+                            <div>
+                                <audio controls>
+                                    <source src="/JS/games/auditiva/RepetirPalabra/audio/av (online-audio-converter.com).mp3" type="audio/mp3">
+                                </audio>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Escribe la palabra que escuchaste</span>
+                                <input id="palabra_1" type="text" class="form-input" placeholder="">
+                                <button type="submit" class="btn btn-primary input-group-btn">Comprobar</button>
+                              </div>
+                        </div>
+
+                        <div class="form-group">
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        </article>
+    </section>
+
+    <div class="burbujas">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+        </div>
+    </header>

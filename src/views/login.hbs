@@ -1,0 +1,128 @@
+<!--Inicio del body-->
+<link rel="stylesheet" href="/CSS/styleLoginSigup.css">
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <!--Fomulario de inicio de sesion-->
+          <form action="/signin" method="POST" class="sign-in-form">
+            <h2 class="title">Inicio de sesión</h2>
+            <!--Username-->
+            <div class="formulario__grupo" id="grupo__username2">
+              <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Nombre de usuario" name="username" id="username2" required/>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error"></p>
+            </div>
+            <!--Password-->
+            <div class="formulario__grupo" id="grupo__password2">
+              <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Contraseña" name="password" id="password2" required/>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error"></p>
+            </div>
+            <div class='cuerpo'>
+              <!-- Sentencia para abrir el Aviso de Privacidad -->
+              <a class="btn solid" onclick='abrirAviso();' id="btn_privacy" href='javascript:void(0);'>Aviso de privacidad</a>
+            </div>
+            <button id="btn_login" class="btn solid">
+              LOGIN
+            </button>
+            <br>
+            <a href="/registeradmin" >
+              ¡Quiero ser admin!
+            </a>
+            <a href="/forget" >
+              Olvide mi contraseña
+            </a>
+          </form>
+          <!--Formulario de registrar-->
+          <form action="/register" method="POST" class="sign-up-form" id="registrarse">
+            <h2 class="title">Registrarse</h2>
+            <!--Nombre(s)-->
+            <div class="formulario__grupo" id="grupo__name">
+              <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Nombre/s" name="name" id="name" required/>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">Los nombres solo puede llevar mayúsculas, minúsculas y ser de 1 a 20 digitos.</p>
+            </div>
+            <!--Apellido(s)-->
+            <div class="formulario__grupo" id="grupo__appe">
+              <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Apellido/s" name="appe" id="appe" required/>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">Los apellidos solo puede llevar mayúsculas, minúsculas y ser de 1 a 40 digitos.</p>
+            </div>
+            <!--Email-->
+            <div class="formulario__grupo" id="grupo__email">
+              <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="email" placeholder="Correo" name="email" id="email" required/>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">El correo solo puede contener minúsculas, numeros, puntos, guiones y guion bajo.</p>
+            </div>
+            <!--User-->
+            <div class="formulario__grupo" id="grupo__username">
+              <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Nombre de usuario" name="username" id="username" required/>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">El usuario puede contener numeros, letras, guion bajo y se de 4 a 16 digitos.</p>
+            </div>
+            <!--Password-->
+            <div class="formulario__grupo" id="grupo__password">
+              <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Contraseña" name="password" id="password" required/>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">La contraseña debe ser de 8 a 32 digitos.</p>
+            </div>
+            <!--Terminos  y condiciones-->
+            <div class="formulario__grupo" id="grupo__terminos">
+              <label>
+                <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                Acepto los terminos y condiciones
+              </label>
+            </div>
+            <br>
+            <div class="formulario__mensaje" id="formulario__mensaje">
+              <p><i class="fas fa-exclamation-circle"><b>Error: El formulario no se ha llenado correctamente</b></i></p>
+            </div>
+            <button type="submit" class="btn">
+              SIGN UP
+            </button>
+          </form>
+        </div>
+      </div>
+      <!--Moverse entre las paginas-->
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>¿Eres nuevo aquí?</h3>
+            <p>¡Ven y registrate!</p>
+            <button class="btn transparent" id="sign-up-btn">Registrate</button>
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>¿Eres uno de nosotros?</h3>
+            <p>¡Bienvenido de vuelta!</p>
+            <button class="btn transparent" id="sign-in-btn">
+              Iniciar Sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+<script src="/JS/accionesLogin.js"></script>
+<script src="/JS/formulario.js"></script>

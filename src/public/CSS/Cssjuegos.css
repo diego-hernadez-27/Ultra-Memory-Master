@@ -1,0 +1,171 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: rgba(0, 0, 0, 0.514);
+    --first-color-alt: rgb(102, 255, 171);
+    --gradient: #affcef;
+    --white: #ffff;
+    --black: #303333;
+    /*========== Font and typography ==========*/
+
+    --biggest-font-size: 1.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+  /* Responsive typography */
+  @media screen and (min-width: 968px) {
+    :root {
+      --biggest-font-size: 3.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Coming Soon', cursive;
+}
+
+.banner{
+    display: flex;
+}
+
+.banner_img{
+    animation: movimiento 2.5s linear infinite;
+}
+
+.banner_img img{
+    width: 600px;
+    display: block;
+}
+
+.btn {
+    width: 150px;
+    background-color: #78f7cc;
+    border: none;
+    outline: none;
+    height: 50px;
+    border-radius: 49px;
+    color: rgba(8, 8, 8, 0.603);
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+section{
+    display: grid;
+    place-content: center;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+nav i{
+    color: var(--first-color);
+    font-size: 20px;
+}
+
+nav {
+    height: var(--header-height);
+    margin: 10px 20px 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg_animate{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, var(--white), var(--gradient));
+    position: relative;
+    overflow: hidden;
+}
+
+nav h1{
+    font-size: var(--h1-font-size);
+    color: var(--black);
+}
+
+nav a:nth-child(1){
+    margin-right: 15px;
+}
+
+nav i{
+    display: none;
+}
+
+form{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+input {
+    background-color: white;
+    border-radius: 8px;
+    height: 30px;
+    font-size: var(--small-font-size);
+    padding: 6px;
+    margin-bottom: 12px;
+    border-color: #303333;
+    font-family: 'Coming Soon', cursive;
+  }
+
+@media screen and (max-width: 100%) {
+    nav a{
+        font-size: var(--small-font-size);
+    }
+
+    nav a:nth-child(1){
+        margin-right: 10px;
+    }
+    section{
+        place-items: center;
+    }
+
+
+    nav{
+        margin-bottom: 30px;
+    }
+}

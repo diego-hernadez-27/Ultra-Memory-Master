@@ -1,0 +1,57 @@
+<div class="container">
+  <!--Formulario de registrar-->
+  <form action="/actualizar" method="POST" class="sign-up-form" id="registrarse">
+    <h2 class="title">ACTUALIZAR PERFIL</h2>
+    <input type="hidden" name="id" value={{user.id}} id="id" />
+    <!--Nombre-->
+    <div class="formulario__grupo" id="grupo__username">
+      <div class="input-field">
+      <i class="fas fa-user"></i>
+      <input type="text" value={{user.username}} placeholder="Username" name="username"/>
+      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario__input-error">El usuario puede contener numeros, letras, guion bajo y se de 4 a 16 digitos.</p>
+    </div>
+    <!--Email-->
+    <div class="formulario__grupo" id="grupo__email">
+      <div class="input-field">
+      <i class="fas fa-at"></i>
+      <input type="email" value={{user.email}} placeholder="Email" name="email"/>
+      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario__input-error">El correo solo puede contener minúsculas, numeros, puntos, guiones y guion bajo.</p>
+    </div>
+    <!--Nombre(s)-->
+    <div class="formulario__grupo" id="grupo__name">
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" value={{user.name}} placeholder="Nombre/s" name="name" id="name" required/>
+        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario__input-error">Los nombres solo puede llevar mayúsculas, minúsculas y ser de 1 a 20 digitos.</p>
+    </div>
+    <!--Apellido(s)-->
+    <div class="formulario__grupo" id="grupo__appe">
+      <div class="input-field">
+      <i class="fas fa-user"></i>
+      <input type="text" value={{user.appe}} placeholder="Apellido/s" name="appe" id="appe" required/>
+      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+      </div>
+      <p class="formulario__input-error">Los apellidos solo puede llevar mayúsculas, minúsculas y ser de 1 a 40 digitos.</p>
+    </div>
+    <br>
+    <div class="formulario__mensaje" id="formulario__mensaje">
+      <p><i class="fas fa-exclamation-circle"><b>Error: El formulario no se ha llenado correctamente</b></i></p>
+    </div>
+    <button type="submit" class="btn">
+      ACTUALIZAR
+    </button>
+    <a class="admin" href="/perfil">Regresar</a>
+  </form>
+</div>
+
+<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/AVISO/aviso.css">
+<link rel="stylesheet" href="/CSS/registeradmin.css">
+<script src="/AVISO/aviso.js"></script>
+<script src="/JS/formularioactua.js"></script>

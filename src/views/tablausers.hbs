@@ -1,0 +1,101 @@
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+<link rel="stylesheet" href="/CSS/tablausers.css">
+<style>
+  .container{
+    max-width: 960px;
+  }
+</style>
+<body>
+  <nav>
+      <h1>MemoryMaster</h1>
+      <div class="nav__list">
+          <a href="/logout">Cerrar Sesión</a>
+      </div>
+  </nav>
+
+  <div class="container">
+    <table id="tablaUsuarios" class="table mt-4">
+      <thead>
+        <tr>
+          <th style="display: none;">ID</th>
+          <th>Nombre/s</th>
+          <th>Apellido/s</th>
+          <th>Usuario</th>
+          <th>Correo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each usuarios}}
+          <tr>
+            <td style="display: none;">{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{appe}}</td>
+            <td>{{username}}</td>
+            <td>{{email}}</td>
+            <td>
+              <a type="button" class="btnEditar btn btn-outline-primary bi bi-pencil"></a>
+              <a href="/deleteuser/{{id}}" class="btn btn-outline-danger bi bi-trash"</a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal para Editar   -->
+    <div id="modalUsuario" class="modal fade" tabindex="-1" aria-labelledby="modalUsuario" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title" id="exampleModalLabel">Editar Info</h5>
+            </div>
+            <div class="modal-body">
+            <form action="/edituser" method="POST">
+                <input name="id_editar" id="id_editar" type="text" hidden>
+                <div class="mb-3">
+                  <label for="nombre_editar" class="col-form-label">Nombre/s:</label>
+                  <input id="nombre_editar" name="nombre_editar" type="text" class="form-control" value="">
+                </div>
+                <div class="mb-3">
+                  <label for="apellido_editar" class="col-form-label">Apellido/s:</label>
+                  <input id="apellido_editar" name="apellido_editar" type="text" class="form-control" value="">
+                </div>
+                <div class="mb-3">
+                  <label for="usuario_editar" class="col-form-label">Usuario:</label>
+                  <input id="usuario_editar" name="usuario_editar" type="text" class="form-control" value="">
+                </div>
+                <div class="mb-3">
+                  <label for="correo_editar" class="col-form-label">Correo:</label>
+                  <input id="correo_editar" name="correo_editar" type="text" class="form-control" value="">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div>
+          </form>
+          </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/JS/code.js"></script>
+
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+
+</body>
